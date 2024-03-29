@@ -109,7 +109,7 @@ Better Support for Asynchronous Updates:
       function MyComponent() {
         const items = ['apple', 'banana', 'cherry'];
 
- return (
+    return (
             <ul>
             {items.map((item, index) => (
                 <li key={index}>{item}</li>
@@ -123,7 +123,7 @@ Better Support for Asynchronous Updates:
    function MyComponent() {
         const items = ['apple', 'banana', 'cherry'];
 
-  return (
+    return (
             <ul>
             {items.map((item, index) => (
                 <li key={item}>{item}</li>
@@ -138,11 +138,11 @@ Better Support for Asynchronous Updates:
    function MyComponent() {
   const [items, setItems] = useState(['apple', 'banana', 'cherry']);
 
-   const addItem = () => {
+     const addItem = () => {
             setItems([...items, 'date']);
         };
 
- return (
+    return (
             <div>
             <button onClick={addItem}>Add Item</button>
             <ul>
@@ -195,11 +195,11 @@ In summary,
 
    Passing Props: Props are passed from parent components to child components as attributes. For example:
 
-   function ParentComponent() {
+    function ParentComponent() {
             return <ChildComponent name="John" />;
             }
 
- function ChildComponent(props) {
+    function ChildComponent(props) {
             return <p>Hello, {props.name}!</p>;
             }
 In this example, the name prop is passed from the ParentComponent to the ChildComponent as an attribute.
@@ -208,50 +208,50 @@ Receiving Props:
    In the child component, props are received as an object. You can access the props using dot notation (props.name) or destructuring (const { name } = props;). For example:
 
 
- function ChildComponent(props) {
+    function ChildComponent(props) {
         return <p>Hello, {props.name}!</p>;
         }
 Default Props:
     You can define default values for props using the defaultProps object. If a prop is not passed from the parent component, the default value will be used. For example:
 
 
- function ChildComponent(props) {
+    function ChildComponent(props) {
         return <p>Hello, {props.name}!</p>;
         }
 
-  ChildComponent.defaultProps = {
+    ChildComponent.defaultProps = {
         name: 'Guest',
         };
 Props Validation: 
      You can define the types of props using the propTypes object. This helps catch errors and ensure that the correct data types are passed to the component. For example:
         import PropTypes from 'prop-types';
 
- function ChildComponent(props) {
+    function ChildComponent(props) {
         return <p>Hello, {props.name}!</p>;
         }
 
- ChildComponent.propTypes = {
+    ChildComponent.propTypes = {
             name: PropTypes.string.isRequired,
             };
 Passing Functions as Props:
      You can also pass functions as props from parent to child components. This allows child components to communicate with parent components. For example:
 
 
- function ParentComponent() {
+    function ParentComponent() {
         const handleClick = () => {
             alert('Button clicked!');
         };
 
- return <ChildComponent onClick={handleClick} />;
+    return <ChildComponent onClick={handleClick} />;
         }
 
- function ChildComponent(props) {
+    function ChildComponent(props) {
         return <button onClick={props.onClick}>Click me</button>;
         }
 Passing Props to JSX Elements:
     You can also pass props to JSX elements directly. For example:
 
- function ParentComponent() {
+    function ParentComponent() {
         return (
             <div>
             <ChildComponent name="John" />
@@ -262,11 +262,12 @@ Passing Props to JSX Elements:
 
 
 ## What is a Config Driven UI ?
+
    A Config-Driven UI, also known as a Configuration-Driven UI, is a user interface that is designed to be highly configurable and customizable through a configuration or settings file. This approach allows developers to define the structure and behavior of the UI using a set of rules or parameters, rather than hardcoding specific elements or behaviors.
 
 Here are some key characteristics of a Config-Driven UI:
 
-  Dynamic Content:
+   Dynamic Content:
             A Config-Driven UI can dynamically generate content based on the configuration provided. This means that the UI can adapt and change based on different configurations, allowing for greater flexibility and customization.
 
  Reusable Components:
@@ -278,7 +279,7 @@ Here are some key characteristics of a Config-Driven UI:
 Adaptive Layouts: 
            A Config-Driven UI can adapt its layout and structure based on the configuration provided. This allows for responsive and adaptive designs that can work across different devices and screen sizes.
 
-        Customizable Behaviors:
+ Customizable Behaviors:
              Config-Driven UIs can define custom behaviors and interactions based on the configuration provided. This allows for greater control over the user experience and can help tailor the UI to specific use cases or requirements.
 
 
